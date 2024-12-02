@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my shope</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            direction: rtl;  
+            text-align: right;  
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #444;
+            border-radius: 50%;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .cart-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .featured-products {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+
+        .featured-products h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #555;
+        }
+
+        .product-slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .slider-arrow {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .product {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 150px;
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .stars {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #f39c12;  
+        }
+
+        .newsletter {
+            padding: 40px 20px;
+            background-color: #e9ecef;
+            text-align: center;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            margin-left: 10px;  
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #f8f8f8;
+        }
+
+        .image-gallery .product {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .about-shop {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f1f1f1;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 40px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        address {
+            font-style: normal;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <input type="text" placeholder="بحث..." class="search-bar">
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">من نحن</a></li>
+                <li><a href="#">المتجر</a></li>
+                <li><a href="#">المساعدة</a></li>
+            </ul>
+        </nav>
+        <button class="cart-button">سلة المشتريات</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>العالم بين يديك</h1>
+            <button>اشتري الان وادفع لاحقا   </button>
+        </section>
+
+        <section class="featured-products">
+            <h2>منتجات مميزة</h2>
+            <div class="product-slider">
+                <button class="slider-arrow">&lt;</button>
+                <div class="product">
+                    <img src="galaxy.jpg" alt="المنتج">
+                    <p>اسم المنتج</p>
+                    <p>$500</p>
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="product">
+                    <img src="samsung100.jpg" alt="المنتج">
+                    <p>اسم المنتج</p>
+                    <p>$300</p>
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                </div>
+                <button class="slider-arrow">&gt;</button>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>النشرة الإخبارية</h2>
+            <p>اشترك في نشرتنا الإخبارية للحصول على التحديثات.</p>
+            <div>
+                <input type="email" placeholder="أدخل بريدك الإلكتروني">
+                <button>اشترك</button>
+            </div>
+        </section> 
+
+        <section class="image-gallery">
+            <div class="product">
+                <img src="images.jpg" alt="صورة 1">
+                <p>اسم المنتج</p>
+                <p>$349</p>
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="product">
+                <img src="samsung.jpg" alt="صورة 2">
+                <p>اسم المنتج</p>
+                <p>$250</p>
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="product">
+                <img src="galaxy.jpg" alt="صورة 3">
+                <p>اسم المنتج</p>
+                <p>$500</p>
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="product">
+                <img src="asus.jpg" alt="صورة 4">
+                <p>اسم المنتج</p>
+                <p>$300</p>
+                <p class="stars">⭐⭐⭐</p>
+            </div>
+        </section>
+
+        <section class="about-shop">
+            <h2>عن المتجر</h2>
+            <p>اقوى اعروض وافضل الاسعار بين يديك ,لسنا الوحيدون لكننا الافضل
+                
+                متخصصون بافضل انواع الاجهزة الحاسوبية بارخص الاسعار .</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <address>
+                🤣 🤣 🤣 🤣 اربد شارع الجامعة شارع المجانين خلف ابو لهب للشورما  <br>
+                 
+            </address>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">المتجر</a></li>
+                    <li><a href="#">المساعدة</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">اخر العروض</a></li>
+                    <li><a href="#">احدث الاجهزة </a></li>
+                    <li><a href="#">اكسسوارات</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">فيسبوك</a></li>
+                    <li><a href="#">تويتر</a></li>
+                    <li><a href="#">إنستجرام</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
